@@ -31,7 +31,7 @@ func (a *Address) SetStreet(s string) {
 type Person struct {
 	Name    string  `json:"name"`
 	Age     int     `json:"age,string"`
-	Email   string  `json:"email"`
+	Email   string  `json:"email,omitempty"`
 	Address Address `json:"address"`
 }
 
@@ -83,7 +83,7 @@ func main() {
 	jsonStr := `{
 		"name": "Vasya",
 		"age": "34",
-		"email": "vasya@example.com",
+		"email": "",
 		"address": "Spb, MyStreet"
 	}`
 
